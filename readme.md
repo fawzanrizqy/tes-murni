@@ -1,6 +1,6 @@
 # Fawzan Rizqy Ananda
 
-This repository contains the code for your application. It is divided into two main folders: `client` and `server`.
+This repository contains the code for the application. It is divided into two main folders: `client` and `server`.
 
 ## Installation
 
