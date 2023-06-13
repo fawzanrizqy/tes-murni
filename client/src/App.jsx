@@ -43,7 +43,7 @@ function App() {
         e.preventDefault();
 
         if (
-          input.password.current.value !== input.currentPassword.current.value
+          input.password.current.value !== input.confirmPassword.current.value
         ) {
           throw { response: { data: { message: "Passwords do not match" } } };
         }
