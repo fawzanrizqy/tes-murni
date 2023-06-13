@@ -1,4 +1,4 @@
-const { User, Log } = require('../models');
+const { User, Log, Data } = require('../models');
 const { checkPass } = require('../helpers/encryptor');
 const { signToken } = require('../helpers/jwt');
 
@@ -46,6 +46,7 @@ class Controller {
                 throw { name: "validationError", message: "Password must contain at least one uppercase, lowercase, number", code: 400 }
             }
             const user = await User.create({ username, password, age });
+            const log = await Log.create({ log: `User ${user.username} created successfully` });
             res.status(201).json({ message: "User created successfully", data: user });
 
         } catch (err) {
@@ -69,6 +70,7 @@ class Controller {
             }
 
             const access_token = signToken({ id: user.id, username: user.username });
+            const log = await Log.create({ log: `User ${user.username} login successfully` });
 
             res.status(200).json({ message: "User logged in successfully", data: user, access_token });
 
@@ -80,13 +82,37 @@ class Controller {
     static async viewData(req, res, next) {
         try {
 
+            const data = await Data.findAll();
+
+            let FinalResults = {};
+            const query = [
+                'CALL calculate_average_score();',
+                'CALL calculate_modus_emotion();',
+                'CALL calculate_average_score_and_mode_emotion();'
+            ];
+
+
+            for (let i = 0; i < query.length; i++) {
+                const [results] = await Data.sequelize.query(query[i]);
+                if (results) {
+                    Object.keys(results).forEach(key => {
+                        FinalResults[key] = results[key];
+                    });
+                }
+            }
+
+            res.json({ data, FinalResults });
         } catch (err) {
             next(err);
         }
     }
 
-    static async Logout(req, res, next) {
+    static async logout(req, res, next) {
         try {
+            const id = req.user.id;
+            const user = await User.findOne({ where: { id } });
+            const log = await Log.create({ log: `User ${user.username} created successfully` });
+            res.status(200).json({ message: "User logged out successfully" });
 
         } catch (err) {
             next(err);

@@ -19,6 +19,8 @@ async function authUser(req, res, next) {
             throw { name: 'unauthorized', message: 'Unauthorized Access', code: 403 }
         }
 
+        req.user = { id: checkUser.id, username: checkUser.username };
+
         next();
     } catch (err) {
         next(err);

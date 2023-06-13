@@ -3,6 +3,7 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
+
   class Data extends Model {
     /**
      * Helper method for defining associations.
@@ -12,6 +13,7 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
     }
+
   }
   Data.init({
     name: DataTypes.STRING,
@@ -21,5 +23,10 @@ module.exports = (sequelize, DataTypes) => {
     sequelize,
     modelName: 'Data',
   });
+
+
+
+
+
   return Data;
 };

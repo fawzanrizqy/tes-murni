@@ -19,7 +19,7 @@ app.post('/register', Controller.register);
 app.post('/login', Controller.login);
 app.use(authUser);
 app.get('/view-data', Controller.viewData);
-app.post('/logout', Controller.login);
+app.post('/logout', Controller.logout);
 app.use(errorHandler);
 
 app.listen(port, () => {
