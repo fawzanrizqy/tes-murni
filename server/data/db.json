@@ -1,0 +1,117 @@
+{
+  "User": [
+    {
+      "id": 1,
+      "username": "admin@mail.com",
+      "password": "admin",
+      "age": 29
+    }
+  ],
+  "Data": [
+    {
+      "id": 1,
+      "name": "Kevin",
+      "score": 80,
+      "emotion": "Happy",
+      "createdAt": "2020-02-20"
+    },
+    {
+      "id": 2,
+      "name": "Josh",
+      "score": 90,
+      "emotion": "Sad",
+      "createdAt": "2020-02-20"
+    },
+    {
+      "id": 3,
+      "name": "Kevin",
+      "score": 85,
+      "emotion": "Happy",
+      "createdAt": "2020-02-20"
+    },
+    {
+      "id": 4,
+      "name": "Kevin",
+      "score": 75,
+      "emotion": "Sad",
+      "createdAt": "2020-02-20"
+    },
+    {
+      "id": 5,
+      "name": "Josh",
+      "score": 65,
+      "emotion": "Angry",
+      "createdAt": "2020-02-20"
+    },
+    {
+      "id": 6,
+      "name": "David",
+      "score": 85,
+      "emotion": "Happy",
+      "createdAt": "2020-02-21"
+    },
+    {
+      "id": 7,
+      "name": "Josh",
+      "score": 90,
+      "emotion": "Sad",
+      "createdAt": "2020-02-21"
+    },
+    {
+      "id": 8,
+      "name": "David",
+      "score": 75,
+      "emotion": "Sad",
+      "createdAt": "2020-02-21"
+    },
+    {
+      "id": 9,
+      "name": "Josh",
+      "score": 85,
+      "emotion": "Sad",
+      "createdAt": "2020-02-21"
+    },
+    {
+      "id": 10,
+      "name": "Josh",
+      "score": 70,
+      "emotion": "Happy",
+      "createdAt": "2020-02-21"
+    },
+    {
+      "id": 11,
+      "name": "Kevin",
+      "score": 80,
+      "emotion": "Sad",
+      "createdAt": "2020-02-21"
+    },
+    {
+      "id": 12,
+      "name": "Kevin",
+      "score": 73,
+      "emotion": "Sad",
+      "createdAt": "2020-02-22"
+    },
+    {
+      "id": 13,
+      "name": "Kevin",
+      "score": 75,
+      "emotion": "Angry",
+      "createdAt": "2020-02-22"
+    },
+    {
+      "id": 14,
+      "name": "David",
+      "score": 82,
+      "emotion": "Sad",
+      "createdAt": "2020-02-22"
+    },
+    {
+      "id": 15,
+      "name": "David",
+      "score": 65,
+      "emotion": "Sad",
+      "createdAt": "2020-02-22"
+    }
+  ]
+}
